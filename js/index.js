@@ -35,3 +35,4 @@ var fetching= ()=>{
 
 fetching();
 
+console.log(filterd_character_objects_array);
