@@ -1,46 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato|Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/928637351c.js"></script>
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Navbar -->
-    <nav>
-        <div class="nav-items">
-            <h1>Game Of Thrones</h1>
-            <a href="" alt="Github repo"><i>Github icon</i></a>
-            <ul class="nav-list">
-                <li id="home">Home</li>
-                <li id="characters">Characters</li>
-                <li id="trailer">Trailer</li>
-            </ul>
-        </div>
+    <nav id="main-nav">
+      <div class="nav-items">
+        <h1>Game Of <span>Thrones</span></h1>
+        <a
+          href="https://github.com/FACN7/HIO-GamesOfThrones"
+          alt="Github repo"
+          target="_blank"
+          ><i class="fab fa-github fa-3x" style="color:white"></i
+        ></a>
+        <ul class="nav-list">
+          <li><a id="home" href="">Home</a></li>
+          <li><a id="characters" href="">Characters</a></li>
+          <li><a id="trailer" href="">Trailer</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Header -->
-    <header class="main-header"></header>
+    <header id="main-header">
+      <div class="image-header">
+        <img src="./assets/images/main-photo.jpg" alt="" />
+      </div>
+    </header>
 
     <!-- Character section -->
     <section id="characters">
-        <div class="container">
-            <div class="cards">
-                <div class="card"></div>
-            </div>
+      <div class="container">
+        <div class="cards">
+          <div class="card"></div>
         </div>
+      </div>
     </section>
 
     <!-- Trailer section-->
     <section id="trailer">
-        <div class="container"></div>
+      <div class="container"></div>
     </section>
 
     <!-- Footer-->
     <footer id="main-footer"></footer>
-</body>
-
+  </body>
 </html>
