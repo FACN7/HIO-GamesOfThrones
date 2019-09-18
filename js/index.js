@@ -9,7 +9,7 @@ var procces_objects = (charc_array,callback) => {
         Object.keys(e).forEach(element => {
 
             if (element == "characterName" || element == "houseName" ||
-                element == "characterImageFull" || element == "actorName" || element == "nickname" || element == "killedBy") {
+                element == "characterImageFull" || element == "actorName"  || element == "killedBy") {
                 obj[element] = e[element];
             }
         });
@@ -37,18 +37,23 @@ function cleanCard(Card){
     Card.getElementsByClassName("chracter_killer")[0].textContent="killed by : ";
     Card.getElementsByClassName("chracter_origin")[0].textContent="origin :";
     Card.getElementsByClassName("chracter_real_name")[0].textContent="actor name :"
-    Card.getElementsByClassName("chracter_nick_name")[0].textContent="NICK NAME :";
+    // Card.getElementsByClassName("chracter_nick_name")[0].textContent="NICK NAME :";
 }
 function modifyByDom(){
     var card=document.getElementsByClassName("flip-card")[0];
     let i=0;
     filterd_character_objects_array.forEach(e=>{
-        card.getElementsByClassName("chracter_killer")[0].textContent+=e.killedBy==undefined ?"":"NONE";
+        card.getElementsByClassName("chracter_killer")[0].textContent+=e.killedBy==undefined?"":e.killedBy;
         card.getElementsByClassName("chracter_name")[0].textContent=e.characterName;
-        card.getElementsByClassName("chracter_nick_name")[0].textContent+=e.nickname==undefined ?"":"NONE";
-        card.getElementsByClassName("chracter_origin")[0].textContent+=e.houseName;
-        card.getElementsByClassName("chracter_real_name")[0].textContent+=e.actorName==undefined?"":"NONE";
+        // card.getElementsByClassName("chracter_nick_name")[0].textContent+=e.nickname==undefined?"":e.nickname;
+        card.getElementsByClassName("chracter_origin")[0].textContent+=e.houseName==undefined?"":e.houseName;
+        card.getElementsByClassName("chracter_real_name")[0].textContent+=e.actorName==undefined?"":e.actorName;
+        if(e.characterName=="Daenerys Targaryen"){
+            card.getElementsByClassName("chracter_image")[0].src="https://pixel.nymag.com/imgs/daily/vulture/2019/05/17/17-daenerys-got-tragedy.w700.h467.jpg";
+
+        }else{
         card.getElementsByClassName("chracter_image")[0].src=e.characterImageFull;
+        }
         if(i<filterd_character_objects_array.length-1){
       var cln = card.cloneNode(true);
       cleanCard(cln)
