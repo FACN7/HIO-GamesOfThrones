@@ -29,7 +29,7 @@ a {
 .nav-items {
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .nav-items h1 {
@@ -60,5 +60,5 @@ a {
 
 #main-header .image-header img {
     width: 100%;
-    max-height: 667px;
+    max-height: 699px;
 }
