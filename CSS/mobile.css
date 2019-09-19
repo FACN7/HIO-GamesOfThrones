@@ -1,18 +1,27 @@
-/* * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width: 1024px;
+
 }
 
-#main-nav {
-    width: 1024px;
+
+body {
+    height: 100%;
 }
 
-#main-header img {
-    width: 1024px;
+#main-nav {}
+
+.container {
+    margin: auto;
+    width: 700px;
 }
 
-body {}
+#characters {}
 
-@media screen and (max-width : 500px) {} */
+
+#characters .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
