@@ -59,16 +59,32 @@
     }
     .flip-card {
         background-color: transparent;
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
         perspective: 1000px;
         margin-bottom: 1rem;
     
     }
+    .flip-card-back {
+        color: white;
+        background-color: rgba(184, 169, 169, 0.431);
+        font-size: 18px;
+        transform: rotateY(180deg);
+        text-align: center;
+        border-radius: 25px;
+        z-index: 1;
+    
+    }
     #characters .container {
         display: grid;
-        grid-template-columns: 1fr ;
+        padding: 10px 10px 10px 10px;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        margin-left: 70px;
     }
+
+
 } 
 @media screen and (max-width : 600px) {
     .nav-list a {
@@ -82,8 +98,7 @@
     #characters .container {
         margin: auto;
         display: grid;
-        justify-content: center;
-        align-items: center;
+        margin-left: 70px;
         padding: 10px 10px 10px 10px;
         
     }
@@ -100,7 +115,7 @@
         font-family: "Staatliches", cursive;
         border: groove 1px white;
         z-index: 1;
-        max-width:600px;
+        max-width:100%;
         display: wrap;
         width: 100%;
     }
@@ -131,6 +146,17 @@
         color: white;
         font-size: 1.5rem;
     }
+    .flip-card-back {
+        color: white;
+        background-color: rgba(184, 169, 169, 0.431);
+        font-size: 15px;
+        transform: rotateY(180deg);
+        text-align: center;
+        border-radius: 25px;
+        z-index: 1;
+    
+    }
+
 
 }
 * {

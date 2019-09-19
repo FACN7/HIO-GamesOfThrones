@@ -43,7 +43,7 @@ function modifyByDom(){
     var card=document.getElementsByClassName("flip-card")[0];
     let i=0;
     filterd_character_objects_array.forEach(e=>{
-        card.getElementsByClassName("chracter_killer")[0].textContent+=e.killedBy==undefined?"":e.killedBy;
+        card.getElementsByClassName("chracter_killer")[0].textContent+=e.killedBy==undefined?"":e.killedBy[0];
         card.getElementsByClassName("chracter_name")[0].textContent=e.characterName;
         // card.getElementsByClassName("chracter_nick_name")[0].textContent+=e.nickname==undefined?"":e.nickname;
         card.getElementsByClassName("chracter_origin")[0].textContent+=e.houseName==undefined?"":e.houseName;
@@ -73,6 +73,7 @@ function IconResizeunder768(arg) {
         document.getElementById("Icons").className="fab fa-github fa-3x";
     }
   }
+  document.getElementById("Icons").style="color: white"
 
   var width768 = window.matchMedia("(max-width: 768px)");
   IconResizeunder768(width768) // Call listener function at run time
