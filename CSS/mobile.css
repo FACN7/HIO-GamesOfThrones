@@ -1,5 +1,82 @@
+@media screen and (max-width : 900px) {
 
-@media screen and (max-width : 768px) {
+
+    #characters .container {
+        display: grid;  
+        grid-template-columns: 1fr ;
+
+    }
+    .container {
+        margin: auto;
+        width: 500px;
+    }
+    
+    #main-nav {
+        position: absolute;
+        top: 0;
+        background: #333;
+        font-family: "Staatliches", cursive;
+        border: groove 1px white;
+        z-index: 1;
+        max-width:900px;
+        display: wrap;
+        width: 100%;
+
+    }
+
+    .nav-items {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.1rem;
+    }
+    
+    .nav-items h1 {
+        color: white;
+        font-size: 1.5rem;
+        font-style: italic;
+        margin-left: 2.5rem;
+    }
+    
+    .nav-items h1 span {
+        color: #FFDC00;
+    }
+    
+    .nav-list {
+        display: flex;
+        margin-right: 0.5rem;
+    }
+    .nav-list a {
+        padding: 1rem;
+        color: white;
+        font-size: 1.5rem;
+    }
+
+}
+@media screen and (max-width : 780px) {
+    .container {
+        margin: auto;
+        width: 200px;
+    }
+    .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+        margin-bottom: 1rem;
+    
+    }
+    #characters .container {
+        display: grid;
+        grid-template-columns: 1fr ;
+    }
+} 
+@media screen and (max-width : 600px) {
+    .nav-list a {
+        font-size: 1.0rem;
+    }
+    .nav-items h1 {
+        font-size: 1.rem;
+    }
 
 
     #characters .container {
@@ -8,8 +85,14 @@
         justify-content: center;
         align-items: center;
         padding: 10px 10px 10px 10px;
+        
+    }
+    .container {
+        margin: auto;
+        width: 100%;
     }
 
+    
     #main-nav {
         position: sticky;
         top: 0;
@@ -17,7 +100,7 @@
         font-family: "Staatliches", cursive;
         border: groove 1px white;
         z-index: 1;
-        max-width:768px;
+        max-width:600px;
         display: wrap;
         width: 100%;
     }
@@ -49,12 +132,31 @@
         font-size: 1.5rem;
     }
 
-} 
-@media screen and (max-width : 600px) {
-    .nav-list a {
-        font-size: 1.0rem;
-    }
-    .nav-items h1 {
-        font-size: 1.rem;
-    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+body {
+    height: 100%;
+}
+
+#main-nav {}
+
+.container {
+    margin: auto;
+    width: 700px;
+}
+
+#characters {}
+
+
+#characters .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
