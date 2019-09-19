@@ -34,20 +34,20 @@ var fetching = (callback) => {
         })
 }
 function cleanCard(Card){
-    Card.getElementsByClassName("chracter_killer")[0].textContent="killed by : ";
-    Card.getElementsByClassName("chracter_origin")[0].textContent="origin :";
-    Card.getElementsByClassName("chracter_real_name")[0].textContent="actor name :"
+    Card.getElementsByClassName("chracter_killer")[0].textContent="KILLED BY- ";
+    Card.getElementsByClassName("chracter_origin")[0].textContent="ORIGIN-";
+    Card.getElementsByClassName("chracter_real_name")[0].textContent="ACTOR-"
     // Card.getElementsByClassName("chracter_nick_name")[0].textContent="NICK NAME :";
 }
 function modifyByDom(){
     var card=document.getElementsByClassName("flip-card")[0];
     let i=0;
     filterd_character_objects_array.forEach(e=>{
-        card.getElementsByClassName("chracter_killer")[0].textContent+=e.killedBy==undefined?"":e.killedBy[0];
+        card.getElementsByClassName("chracter_killer")[0].textContent+=e.killedBy==undefined?"Still Alive":e.killedBy[0];
         card.getElementsByClassName("chracter_name")[0].textContent=e.characterName;
         // card.getElementsByClassName("chracter_nick_name")[0].textContent+=e.nickname==undefined?"":e.nickname;
-        card.getElementsByClassName("chracter_origin")[0].textContent+=e.houseName==undefined?"":e.houseName;
-        card.getElementsByClassName("chracter_real_name")[0].textContent+=e.actorName==undefined?"":e.actorName;
+        card.getElementsByClassName("chracter_origin")[0].textContent+=e.houseName==undefined?"NONE":e.houseName;
+        card.getElementsByClassName("chracter_real_name")[0].textContent+=e.actorName==undefined?"NONE":e.actorName;
         if(e.characterName=="Daenerys Targaryen"){
             card.getElementsByClassName("chracter_image")[0].src="https://pixel.nymag.com/imgs/daily/vulture/2019/05/17/17-daenerys-got-tragedy.w700.h467.jpg";
 
