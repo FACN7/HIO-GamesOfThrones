@@ -6,9 +6,7 @@
     box-sizing: border-box
 }
 
-body {
-    background: black;
-}
+body {}
 
 li {
     list-style: none;
@@ -78,94 +76,116 @@ Hosen code
     perspective: 1000px;
     margin-bottom: 2rem;
 
-  }
+}
 
-  
-  .flip-card-inner {
+
+.flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 10px;
 
-  }
-  
-  .flip-card:hover .flip-card-inner {
+}
+
+.flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-  }
-  
-  .flip-card-front, .flip-card-back {
+}
+
+.flip-card-front,
+.flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    
 
-  }
-  
-  .flip-card-front {
-    background-color:rgba(190, 165, 165, 0.5);
+
+}
+
+.flip-card-front {
+    background-color: rgba(190, 165, 165, 0.5);
     color: black;
-  }
-  
-  .flip-card-back {
-    color :white;
-    background-color:rgba(184, 169, 169, 0.431);
+}
+
+.flip-card-back {
+    color: white;
+    background-color: rgba(184, 169, 169, 0.431);
     font-size: 25px;
     transform: rotateY(180deg);
-    text-align:center;
-    border-radius:  25px; 
+    text-align: center;
+    border-radius: 25px;
     z-index: 1;
-  
-  }
-  
-  .chracter_image{
-  height:300px;
-  width:300px;
-  border-radius:  25px; 
-  }
 
-  .card-information{
-      margin-top: 2.5rem;
-  }
+}
 
-  .flip-card-back h1{
-      margin-top: .8rem
-  }
+.chracter_image {
+    height: 300px;
+    width: 300px;
+    border-radius: 25px;
+}
 
-  .card-information p{
+.card-information {
+    margin-top: 2.5rem;
+}
+
+.flip-card-back h1 {
+    margin-top: .8rem
+}
+
+.card-information p {
     margin-top: 1rem;
     text-align: left;
     padding-left: 1rem
-    /* line-height: .1rem; */
+        /* line-height: .1rem; */
 }
 
+#trailer {
+    background: black;
+}
 
-  
-.trailer-frame{
+.trailer-frame {
 
-margin: auto;
-width: 100%;
-height: 450px;
-border-radius: 15px;
-border: 2px solid gray;
+    margin: auto;
+    width: 100%;
+    height: 450px;
+    border-radius: 15px;
+    border: 2px solid gray;
 
 }
 
- .container{
+.container {
     margin: auto;
     max-width: 1100px;
 }
-#characters .container{
+
+#characters {
+    background: black;
+}
+
+#characters .container {
     margin: auto;
     max-width: 1100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 10px 0 10px 0;
-    }
+}
 
+#main-footer {
+    height: 150px;
+    background: #AAAAAA;
+}
 
+#main-footer .footer-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+#main-footer .footer-items p {
+    margin-bottom: 1rem;
+}
