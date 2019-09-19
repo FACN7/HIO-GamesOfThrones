@@ -65,6 +65,18 @@ function modifyByDom(){
 
 
 }
+
+function IconResizeunder768(arg) {
+    if (arg.matches) { // If media query matches
+      document.getElementById("Icons").className="fab fa-github fa-2x";
+    } else {
+        document.getElementById("Icons").className="fab fa-github fa-3x";
+    }
+  }
+
+  var width768 = window.matchMedia("(max-width: 768px)");
+  IconResizeunder768(width768) // Call listener function at run time
+  width768.addListener(IconResizeunder768) // Attach listener function on state changes
 fetching(modifyByDom);
 
 
